@@ -7,7 +7,7 @@ import (
 	pb "github.com/isrealsix/grpc101/proto"
 )
 
-func (s *helloServer) SayHelloClientStreaminf(stream pb.GreetService_SayHelloClientStreamingServer) error {
+func (s *helloServer) SayHelloClientStreaming(stream pb.GreetService_SayHelloClientStreamingServer) error {
 	var messages []string
 	for {
 		req, err := stream.Recv()
